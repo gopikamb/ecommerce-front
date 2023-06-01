@@ -1,0 +1,44 @@
+<div class="container px-4 py-5 mx-auto" style="height:600px;width:100%; margin-top:-40px;">
+    <div class="card card0">
+        <div class="d-flex flex-lg-row flex-column-reverse">
+            <div class="card card1">
+                <div class="row justify-content-center my-auto">
+                    <div class="col-md-8 col-10 my-5">
+                        <div class="row justify-content-center px-3 mb-3">
+                        </div>
+                        <h3 class="mb-5 text-center heading"><span style="color:rgb(222, 17, 222)">B</span><span style="color:blue">store</span></h3>
+
+                        <h6 class="msg-info">Please login to your account</h6>
+
+                        <div class="form-group">
+                            <label class="form-control-label text-muted">Email Id</label>
+                            <input type="text" id="email" name="email"  [(ngModel)]="email" placeholder=" email id" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-control-label text-muted">Password</label>
+                            <input type="password" id="password" name="password"  [(ngModel)]="password" placeholder="Password" class="form-control">
+                        </div>
+
+                        <div class="row justify-content-center my-3 px-3">
+                            <button (click)="login()" class="btn-block btn-color">Login</button>
+                        </div>
+                        
+
+                        <div class="row justify-content-center my-2">
+                            <a href="#"><small class="text-muted">Forgot Password?</small></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom text-center mb-5">
+                    <p class="sm-text mx-auto mb-3">Don't have an account?<a  routerLink="/products/register"  class="btn btn-white ml-2" >Register</a></p>
+                </div>
+            </div>
+            <div class="card card2">
+                <div class="my-auto mx-md-5 px-md-5 right">
+<img src="https://activetuitions.com/images/bg/login.png" height="600px;" width="500px;" alt="image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

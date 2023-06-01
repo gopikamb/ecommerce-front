@@ -1,0 +1,72 @@
+
+
+                         ANGULAR - FRONT END DEVELOPMENT TECHNOLOGY - WEB APP DESIGN
+                        -------------------------------------------------------------
+
+
+          Basic Commands
+         ----------------
+
+          1. To install angular CLI: npm i -g @angular/cli
+          2. To check angular version: ng v
+          3. To create angular project: ng new project-name
+          4. To run angular project: ng serve
+          5. To create a component : ng g c component-name
+          6. To create angular services : ng g s service-folder/service-name
+          7. To run contact server: npm start
+          8.To create angular pipe : ng g p pipe-folder/pipe-name
+          9.To generate lazy loaded module : ng g m module-name --route path-name --module root-module-name(i.e, app.module)
+          10. To create components in lazy module : ng g c module-name/component-name
+
+          Basic Concepts
+         ----------------
+ 
+
+          1.  Module : Import 3rd party libraries ,and here the provision to create html pages inside the module ,root module:AppModule
+          2.  Component : We will get a html,style sheet,ts file,root component:AppComponent
+          3.  Dercorator : '@' to specify metadata
+          4.  Data binding : Sharing data within a component
+              4.1. One Way Binding : Data sharing will be only at one direction at a time
+                   4.1.1. ts(component) file to html(view) file 
+                         4.1.1.1. String interpolation : {{variable-name}}
+                         4.1.1.2. Property Binding : [attribute-name]="property-name"
+                   4.1.2. html(view) file to ts(component) file 
+                         4.1.2.1. Event Binding : (event-name)="function call"
+                         4.1.2.2. Event Binding using $event argument : (event-name)="function call($event)"
+                         4.1.2.3. Using Template Reference variable : #variable-name
+              4.2. Two Way Binding : Data sharing will be pass two directions at a time   
+                   4.2.1. ng Binding using ngModel : [(ngModel)]="variable-name"  
+                        -Import FormsModule inside your project,Module
+          5.  Set up path for a component - AppRoutingModule              
+                 path setup inside Routes Array: {path:'path',component:component-name}    
+          6.  To redirect from one ts to another,we need navigateByURL() - Router class
+          7.  Dependency Injection :  To share data between dependent classes , in constructor(data share b/w user defined component and predefined component)
+               - access-specifier variable-name : dependent-class-name 
+          8.  Angular Services : To share common data with all components
+          9.  To call HTTP Methods
+               - Import HTTPClientModule inside module file
+               - Use HttpClient class to get HTTP Methods
+          10. Asynchronous function - RxJS(In promise-resolve one asynchronous function at a time )
+              -Observable(Here resolve more than one asynchronous function at a time)
+                  - subscribe(call back function) - resolved
+          11. Directives - To manipulate DOM
+                  - Component Directives
+                  - Structural Directives : Add / Remove an html elements 
+                        - *ngFor : *ngFor="let variable-name of Array-name" (like for of in JS)
+                        - *ngIf : *ngIf="condition" when condition==true then html element will added to DOM.
+          12. Activated Routes : Provides access to information about a route associated with a component that is loaded in an outlet.
+          13. Pipe : accept an input value and return a transformed value
+                  - syntax : value_expression | pipe-operator [ : format]
+          14. Angular Forms : 
+                  - Template driven forms : create html view for the form in html page
+                  - Model driven forms : create a model for the form in ts file    
+                         - Reactive Forms : to validate user inputs
+                              -Import ReactiveFormsModule to AppModule 
+                                  -To make a component as Reactive
+                                       - Form group : Dependency Inject FormBuilder class
+                                       - Form Array :
+                                       - Form Control : 
+          15. Parent Child Communication 
+                  - parent to child : Input Dercorator
+                  - Child to Parent : Output Decorator
+          16. Lazy Loading : 
