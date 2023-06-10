@@ -25,11 +25,13 @@ color:beige}
 
 body
 {
-  background-color:#f2f2f2;
+  background-color:#f8f2f2;
   font-family: 'RobotoDraft', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
-
+section{
+  background-color: rgb(217, 174, 248);
+}
 *
 {
   -webkit-box-sizing: border-box;
